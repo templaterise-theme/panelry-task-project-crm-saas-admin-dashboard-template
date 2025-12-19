@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Panelry Dashboard</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/icons/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="./assets/icons/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="./assets/icons/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="./assets/plugin/select2/css/select2.min.css" rel="stylesheet">
+    <link href="./assets/css/board.css" rel="stylesheet">
+    <link href="./assets/css/chat.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeToggle">
+            <i class="bi bi-sun" id="themeIcon"></i>
+        </button>
+    </div>
+    <div class="auth-container">
+        <div class="form-side">
+            <div class="form-header">
+                <h2>Create Account</h2>
+                <p>Join Panelry and boost your productivity</p>
+            </div>
+
+            <form class="auth-form" id="signupForm">
+                <div class="form-group">
+                    <label class="form-label" for="signupName">Full Name</label>
+                    <input type="text" class="form-input" id="signupName" placeholder="John Doe" required>
+                    <div class="error-message" id="nameError" style="display: none;">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <span>Please enter your full name</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signupEmail">Email Address</label>
+                    <input type="email" class="form-input" id="signupEmail" placeholder="you@example.com" required>
+                    <div class="error-message" id="signupEmailError" style="display: none;">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <span>Please enter a valid email address</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signupPassword">Password</label>
+                    <input type="password" class="form-input" id="signupPassword" placeholder="Create a strong password" required>
+                    <button type="button" class="password-toggle" id="signupPasswordToggle">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-input" id="confirmPassword" placeholder="Confirm your password" required>
+                    <div class="error-message" id="confirmPasswordError" style="display: none;">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <span>Passwords do not match</span>
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                    <label class="form-check-label" for="termsAgree">
+                        I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#" class="form-link">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary" id="signupBtn">
+                    <span>Create Account</span>
+                </button>
+
+                <div class="divider">
+                    <span>Or sign up with</span>
+                </div>
+
+                <div class="social-buttons">
+                    <button type="button" class="social-btn google">
+                        <i class="bi bi-google"></i>
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <i class="bi bi-github"></i>
+                    </button>
+                    <button type="button" class="social-btn microsoft">
+                        <i class="bi bi-microsoft"></i>
+                    </button>
+                </div>
+
+                <div class="form-links">
+                    <p>Already have an account? <a href="login.html" class="form-link">Sign in instead</a></p>
+                </div>
+
+                <a href="index.html" class="back-link">
+                    <i class="bi bi-arrow-left"></i>
+                    <span>Back to home</span>
+                </a>
+            </form>
+        </div>
+    </div>
+    <script  src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script  src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script  src="./assets/plugin/chart/chart.js"></script>
+    <script  src="./assets/plugin/select2/js/select2.min.js"></script>
+    <script  src="./assets/js/chart.js"></script>
+    <script  src="./assets/js/chat.js"></script>
+    <script  src="./assets/js/board.js"></script>
+    <script  src="./assets/js/script.js"></script>
+</body>
+</html>

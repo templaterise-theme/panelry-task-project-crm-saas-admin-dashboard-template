@@ -65,6 +65,7 @@ let currentReplyingTo = null;
 let selectedMessage = null;
 let currentChatInfo = null;
 
+
 // Mobile detection
 function isMobileDevice() {
   return (
@@ -668,16 +669,24 @@ function confirmCloseChat() {
   closeChatSearch();
   closeReplyBar();
 
-  chatInterface.style.display = "none";
-  welcomeScreen.style.display = "flex";
+  if(chatInterface){
+    chatInterface.style.display = "none";
+  }
+
+  if(welcomeScreen){
+    welcomeScreen.style.display = "flex";
+  }
+  
 
   document.querySelectorAll(".chat-item").forEach((item) => {
     item.classList.remove("active");
   });
 
   if (isMobileDevice()) {
-    sidebarChat.classList.remove("hide");
-    mainChat.classList.remove("show");
+    if(sidebarChat && mainChat){
+      sidebarChat.classList.remove("hide");
+      mainChat.classList.remove("show");
+    }
   }
 
   hideModal(closeChatModal);
@@ -1936,19 +1945,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 100);
 
   if (isMobileDevice()) {
-    chatInterface.style.display = "none";
-    welcomeScreen.style.display = "flex";
-    sidebarChat.classList.remove("hide");
-    mainChat.classList.remove("show");
+    if(chatInterface && welcomeScreen && sidebarChat && mainChat){ 
+      chatInterface.style.display = "none";
+      welcomeScreen.style.display = "flex";
+      sidebarChat.classList.remove("hide");
+      mainChat.classList.remove("show");
+    } 
   }
 });
 
 // Initialize on window load as backup
 window.addEventListener("load", () => {
   if (isMobileDevice()) {
-    chatInterface.style.display = "none";
-    welcomeScreen.style.display = "flex";
-    sidebarChat.classList.remove("hide");
-    mainChat.classList.remove("show");
+    if(chatInterface && welcomeScreen && sidebarChat && mainChat){ 
+      chatInterface.style.display = "none";
+      welcomeScreen.style.display = "flex";
+      sidebarChat.classList.remove("hide");
+      mainChat.classList.remove("show");
+    }
   }
 });

@@ -1238,7 +1238,9 @@ textarea.form-control {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 24px;
+  gap: 16px;
 }
 
 .filter-controls {
@@ -2544,7 +2546,7 @@ textarea.form-control {
 
 
   .main {
-    padding: 5px;
+    padding: 16px;
   }
 
   .main,
@@ -2578,13 +2580,18 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 540px) {
+  .page-header {
+    margin-top: 70px;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: 1fr;
   }
 
   .page-header {
-    margin-top: 70px;
     flex-direction: column;
     align-items: flex-start;
   }
